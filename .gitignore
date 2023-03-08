@@ -1,1 +1,4 @@
 node_modules
+.temporary_cache
+dist
+package-lock.json
