@@ -1,4 +1,5 @@
-*{
-	margin: 0;
-	box-sizing: border-box;
-}
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import './colors';
+@import './_base.scss';
+@import './main.scss';
+@import './_header.scss';

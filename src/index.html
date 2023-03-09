@@ -4,13 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.min.css" />
 		<title>Sign up</title>
 	</head>
 	<body>
-		@@include('parts/header.html')
-
-		<h1>Home page</h1>
-
-		@@include('parts/footer.html')
+		<main class="main">
+			<div class="container">
+				@@include('parts/header.html')
+				<div class="container__main-content">
+					<h1>Home page</h1>
+					@@include('parts/footer.html')
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
