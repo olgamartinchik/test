@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=PT+Sans&family=Work+Sans:wght@200;300;400;500&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/style.min.css" />
 		<title>Sign up</title>
 	</head>
@@ -12,7 +18,78 @@
 			<div class="container">
 				@@include('parts/header.html')
 				<div class="container__main-content">
-					<h1>Home page</h1>
+					<div>
+						<h1>New user?</h1>
+						<h2>Use the form below to create your account.</h2>
+						<form action="" class="form">
+							<div class="form__group">
+								<div>
+									<label class="label" for="name">First name</label>
+									<input type="text" id="name" />
+								</div>
+								<div>
+									<label class="label" for="surname">Last name</label>
+									<input type="text" id="surname" />
+								</div>
+							</div>
+							<div class="form__group">
+								<div>
+									<label class="label" for="nationality">Nationality</label>
+									<input type="text" id="nationality" />
+								</div>
+								<div>
+									<label class="label" for="email">E-mail</label>
+									<input type="text" id="email" />
+								</div>
+							</div>
+							<div class="form__group">
+								<div>
+									<label class="label" for="nationality">Date of Birth</label>
+									<div class="form__group_date-group">
+										@@include('parts/daySelect.html')
+										@@include('parts/monthSelect.html')
+										@@include('parts/yearSelect.html')
+									</div>
+								</div>
+								<div>
+									<label class="label" for="">Gender</label>
+
+									<div class="form__group_gender">
+										<div>
+											<input
+												type="radio"
+												id="male"
+												value="male"
+												name="gender"
+											/>
+											<label for="male">Male</label>
+										</div>
+										<div>
+											<input
+												type="radio"
+												id="female"
+												value="female"
+												name="gender"
+											/><label for="female">Female</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__group">
+								<div>
+									<label class="label" for="password">Password</label>
+									<input type="text" id="password" />
+								</div>
+								<div>
+									<label class="label" for="confirmation"
+										>Confirm Password</label
+									>
+									<input type="text" id="confirmation" />
+								</div>
+							</div>
+							<button class="button">Complete Signup</button>
+						</form>
+					</div>
 					@@include('parts/footer.html')
 				</div>
 			</div>

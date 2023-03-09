@@ -1,3 +1,4 @@
+@use '../scss/colors';
 .main{
 	display: flex;
 	align-items: center;
@@ -7,12 +8,57 @@
 }
 .container{
 	display: flex;
+	
 	max-width: 665px;
 	width: 100%;
-	background-color: #FFFFFF;
+	background-color: colors.$main-color;
 	margin: 5px 15px;
 	padding: 0;
 	&__main-content{
+		position: relative;
 		padding: 39px 22px 33px 20px;
+		width: 100%;
+		min-height: 409px;
 	}
+
+}
+.form__group{
+	display: flex;
+	justify-content: space-between;
+	// flex-wrap: wrap;
+	gap: 13.5px;
+	width: 100%;
+	div{
+		display: flex;
+		flex-direction: column;		
+		width: 100%;
+	}
+	div &_gender{		
+		flex-direction: row;
+		div{		
+			flex-direction: row;
+			gap: 6px;
+		}
+	
+	}
+	div &_date-group{
+		flex-direction: row;
+		gap: 10px
+
+	}
+}
+.button{
+	position: absolute;
+	right: 22px;
+	bottom: 33px;
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	width: 154px;
+	height: 32px;
+	border: none;
+	background-color: colors.$secondary-color;
+	color: colors.$main-color;
 }

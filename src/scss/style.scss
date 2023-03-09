@@ -1,5 +1,6 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import './colors';
-@import './_base.scss';
-@import './main.scss';
-@import './_header.scss';
+@import './base';
+@import './main';
+@import './header';
+@import './footer';
