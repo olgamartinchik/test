@@ -1,8 +1,8 @@
 @use '../scss/colors';
 .footer{
 	display: flex;
-
 	justify-content: start;
+	gap: 10px;
 	&__title{
 		display: contents;
 		font-family: 'WorkSans';
