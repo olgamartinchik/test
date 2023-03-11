@@ -1,0 +1,30 @@
+@use '../scss/colors';
+.notification{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	background-color: colors.$main-color;
+	padding: 30px;
+	right: 15px;
+	top: 15px;
+	box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+	
+	opacity: 0;
+	transition: 1s ease;
+	img{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		cursor: pointer;
+		padding: 5px;
+	}
+	
+}
+.showing{
+	transition: 1s ease;
+	opacity: 1;
+
+}
+.hide{
+	opacity: 0;
+}

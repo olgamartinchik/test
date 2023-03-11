@@ -1,5 +1,6 @@
 @use '../scss/colors';
 body{
+	position: relative;
 	background-color:  colors.$body-color;
 	margin: 0;
 	width: 100%;
@@ -17,6 +18,12 @@ h1{
 	color: colors.$title-color;
 }
 h2{
+	font-family: 'WorkSans';
+	font-size: 14px;
+	line-height: 16px;
+	color:colors.$title-color;
+}
+h3{
 	font-family: 'WorkSans';
 	font-size: 14px;
 	line-height: 16px;

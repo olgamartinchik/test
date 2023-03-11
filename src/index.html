@@ -15,12 +15,17 @@
 	</head>
 	<body>
 		<main class="main">
+			<!-- @@include('parts/notification.html') -->
 			<div class="container">
 				@@include('parts/header.html')
 				<div class="container__main-content">
-					<div>
+					<!-- <div class="congratulate-container">
+						<h1>Thank you!</h1>
+						<h2 class="'subtitle">you registered!</h2>
+					</div> -->
+					<div id="form-container" class="">
 						<h1>New user?</h1>
-						<h2>Use the form below to create your account.</h2>
+						<h3>Use the form below to create your account.</h3>
 						<form
 							class="form"
 							method="POST"

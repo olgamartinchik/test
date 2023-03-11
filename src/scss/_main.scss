@@ -1,5 +1,6 @@
 @use '../scss/colors';
 .main{
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -8,8 +9,7 @@
 	
 }
 .container{
-	display: flex;
-	
+	display: flex;	
 	max-width: 665px;
 	width: 100%;
 	background-color: colors.$main-color;
@@ -17,6 +17,10 @@
 	margin: 5px 15px;
 	padding: 0;
 	&__main-content{
+		display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 		background-image: url("../images/background.svg");
 		position: relative;
 		padding: 39px 22px 33px 20px;
@@ -24,6 +28,9 @@
 		min-height: 409px;
 	}
 
+}
+.form-container{
+	height: 100%;
 }
 .form{
 	transition: 0.6s ease;
@@ -62,6 +69,7 @@
 }
 .button{
 	position: absolute;
+
 	right: 22px;
 	bottom: 33px;
 	font-family: 'PT Sans';
@@ -74,4 +82,16 @@
 	border: none;
 	background-color: colors.$secondary-color;
 	color: colors.$main-color;
+	cursor: pointer;
+}
+.unvisible{
+	display: none;
+}
+.congratulate-container{
+	height: 100%;  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	
+
 }

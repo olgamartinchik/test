@@ -8,7 +8,7 @@ export class ValidationService {
 		let inputs = form.querySelectorAll("input");
 		inputs.forEach((input, ind) => {
 			this.errorService.removeError(input);
-			console.log("input name", input.name);
+			// console.log("input name", input.name);
 			const nameRegexp = /^[a-zA-Z]+$/;
 			const emailRegexp = /^\S+@\S+\.\S+$/;
 			const passwordRegexp = /^[0-9a-zA-Z]{8,}/;
@@ -33,6 +33,8 @@ export class ValidationService {
 				let message = this.errorService.getErrorMessage(input);
 				this.errorService.createError(input, message);
 				result = false;
+			} else {
+				result = true;
 			}
 		});
 
