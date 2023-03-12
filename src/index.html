@@ -46,7 +46,8 @@
 								<!-- 3 -->
 								<div class="form__group_container three-group">
 									<label class="label" for="nationality">Nationality</label>
-									<input type="text" id="nationality" name="nationality" />
+									<!-- <input type="text" id="nationality" name="nationality" /> -->
+									@@include('components/nationalitySelect.html')
 								</div>
 								<!-- 4 -->
 								<div class="form__group_container four-group">
@@ -58,11 +59,11 @@
 								<!-- 5 -->
 								<div class="form__group_container five-group">
 									<label class="label">Date of Birth</label>
-									<fieldset name="birth" class="form__group_date-group">
+									<div class="form__group_date-group">
 										@@include('components/daySelect.html')
 										@@include('components/monthSelect.html')
 										@@include('components/yearSelect.html')
-									</fieldset>
+									</div>
 								</div>
 								<!-- 6 -->
 								<div class="form__group_container six-group">
