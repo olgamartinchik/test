@@ -1,37 +1,35 @@
 @use '../scss/colors';
 body{
 	position: relative;
+	font-family: 'WorkSans';
 	background-color:  colors.$body-color;
 	margin: 0;
 	width: 100%;
 	height: 100vh;
+	overflow-y: auto;
 }
 *{
 
 	box-sizing: border-box;
 }
 h1{
-	font-family: 'WorkSans';
 	font-size: 22px;
 	line-height: 26px;
 	letter-spacing: -0.46px;
 	color: colors.$title-color;
 }
-h2{
-	font-family: 'WorkSans';
+h2, select, input, .gender{
 	font-size: 14px;
 	line-height: 16px;
 	color:colors.$title-color;
 }
 h3{
-	font-family: 'WorkSans';
 	font-size: 14px;
 	line-height: 16px;
 	color:colors.$title-color;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .label{
-	font-family: 'WorkSans';
 	font-size: 12px;
 	line-height: 14px;
 	color: colors.$label-color;
@@ -45,6 +43,9 @@ select, input[type="text"],input[type="password"]{
 }
 input[type="text"], input[type="password"]{
 	width: 234px;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .error input {
 	color: colors.$error-color;

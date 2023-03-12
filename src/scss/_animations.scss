@@ -1,0 +1,65 @@
+.animate-btn:hover{
+	animation: move 1s linear infinite;
+}
+@keyframes move {
+	35% {transform: rotate(0) translate(0, 0);}
+	40% {transform: rotate(5deg) translate(0, -2px);}
+	45% {transform: rotate(-3deg) translate(0, -2px);}
+	50% {transform: rotate(5deg) translate(0, -2px);}
+	55% {transform: rotate(-3deg) translate(0, -2px);}
+	60% {transform: rotate(5deg) translate(0, -2px);}
+	65% {transform: rotate(-3deg) translate(0, -2px);}
+	70% {transform: rotate(0) translate(0, 0);}
+}
+
+path {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: draw 6s linear forwards; 
+}
+
+@keyframes draw {
+	100%{
+		stroke-dashoffset:0;
+		fill:#F9FAFF;
+		stroke:transparent;
+	}
+
+}
+.form__group_container{
+	transform: translateY(400%);
+	opacity: 0;
+}	 
+	.one-group{
+		animation: visible 0.25s linear forwards;
+	}
+	.two-group{
+		animation: visible 0.5s linear forwards;
+	}
+	.three-group{
+		animation: visible 0.75s linear forwards;
+	}
+	.four-group{
+		animation: visible 1s linear forwards;
+	}
+	.five-group{
+		animation: visible 1.25s linear forwards;
+	}
+ .six-group{
+		animation: visible 1.5s linear forwards;
+	}
+	.seven-group{
+		animation: visible 1.75s linear forwards;
+	}
+	.eight-group{
+		animation: visible 2s linear forwards;
+	}
+
+@keyframes visible {
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+}
+

@@ -10,6 +10,7 @@
 }
 .container{
 	display: flex;	
+	overflow: hidden;
 	max-width: 665px;
 	width: 100%;
 	background-color: colors.$main-color;
@@ -90,24 +91,13 @@ svg{
 	background-color: colors.$secondary-color;
 	color: colors.$main-color;
 	cursor: pointer;
+	z-index: 2;
 	&:hover{
 		opacity: .9;
 	}
 }
-.animate-btn:hover{
-	animation: cycle 1s linear infinite;
-}
-@keyframes cycle {
-	35% {transform: rotate(0) translate(0, 0);}
-	40% {transform: rotate(5deg) translate(0, -2px);}
-	45% {transform: rotate(-3deg) translate(0, -2px);}
-	50% {transform: rotate(5deg) translate(0, -2px);}
-	55% {transform: rotate(-3deg) translate(0, -2px);}
-	60% {transform: rotate(5deg) translate(0, -2px);}
-	65% {transform: rotate(-3deg) translate(0, -2px);}
-	70% {transform: rotate(0) translate(0, 0);}
-}
-.unvisible{
+
+.invisible{
 	display: none;
 }
 .congratulate-container{
@@ -118,18 +108,4 @@ svg{
 
 }
 
-path {
-  stroke-dasharray: 3000;
-  stroke-dashoffset: 3000;
-  animation: draw 6s   linear forwards;
- 
-}
 
-@keyframes draw {
-	100%{
-		stroke-dashoffset:0;
-		fill:#F9FAFF;
-		stroke:transparent;
-	}
-
-}

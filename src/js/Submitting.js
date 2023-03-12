@@ -51,7 +51,7 @@ export class SubmittingForm {
 			".container__main-content"
 		);
 		const formContainer = containerMainContent.querySelector("#form-container");
-		formContainer.classList.add("unvisible");
+		formContainer.classList.add("invisible");
 		const gratulationContent = this.createGratulationContent();
 
 		containerMainContent.insertBefore(
