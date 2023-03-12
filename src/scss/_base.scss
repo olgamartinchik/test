@@ -41,15 +41,18 @@ select, input[type="text"],input[type="password"]{
 	border-bottom: 2px solid colors.$body-color;
 	outline: none;
 	background: none;
+	padding-bottom: 5px;
 }
 select{
 	max-width: 234px;
+	
 }
 input[type="text"], input[type="password"]{
 	max-width: 234px;	
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
 }
 .error input {
 	color: colors.$error-color;
