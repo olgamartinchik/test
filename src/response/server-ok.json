@@ -1,6 +1,6 @@
 {
 	"code": 200,
 	"status":"ok",
-	"message":"",
+	"message":"Registration was successful!",
 	"data":{}
 }

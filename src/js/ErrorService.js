@@ -1,14 +1,11 @@
 export class ErrorService {
 	createError(input, text) {
 		const parent = input.parentNode;
-		console.log(
-			"parent",
-			parent.classList.contains("form__group_container"),
-			parent.parentNode.classList.contains("form__group_container")
-		);
+
 		const errorLabel = document.createElement("span");
 		errorLabel.classList.add("error-label");
 		errorLabel.textContent = text;
+
 		if (parent.classList.contains("form__group_container")) {
 			parent.classList.add("error");
 			parent.append(errorLabel);

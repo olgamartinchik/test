@@ -41,9 +41,9 @@ select, input[type="text"],input[type="password"]{
 	border: none;
 	border-bottom: 2px solid colors.$body-color;
 	outline: none;
+	background: none;
 }
 input[type="text"], input[type="password"]{
-	background-color: transparent;
 	width: 234px;	
 }
 .error input {

@@ -17,11 +17,12 @@
 	margin: 5px 15px;
 	padding: 0;
 	&__main-content{
+		position: relative;
 		display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-		background-image: url("../images/background.svg");
+		// background-image: url("../images/background.svg");
 		position: relative;
 		padding: 39px 22px 33px 20px;
 		width: 100%;
@@ -29,11 +30,17 @@
 	}
 
 }
+
 .form-container{
+	position: relative;
+	z-index: 2;
 	height: 100%;
 }
-.form{
-	transition: 0.6s ease;
+svg{
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
 }
 .form__group{
 	display: flex;
@@ -47,7 +54,8 @@
 		flex-direction: column;		
 		width: 100%;
 		margin-bottom: 16px;
-	
+		transition: .6s ease;
+		z-index: 2;
 	}
 	&_container &_gender{		
 		display: flex;
@@ -69,7 +77,6 @@
 }
 .button{
 	position: absolute;
-
 	right: 22px;
 	bottom: 33px;
 	font-family: 'PT Sans';
@@ -83,6 +90,22 @@
 	background-color: colors.$secondary-color;
 	color: colors.$main-color;
 	cursor: pointer;
+	&:hover{
+		opacity: .9;
+	}
+}
+.animate-btn:hover{
+	animation: cycle 1s linear infinite;
+}
+@keyframes cycle {
+	35% {transform: rotate(0) translate(0, 0);}
+	40% {transform: rotate(5deg) translate(0, -2px);}
+	45% {transform: rotate(-3deg) translate(0, -2px);}
+	50% {transform: rotate(5deg) translate(0, -2px);}
+	55% {transform: rotate(-3deg) translate(0, -2px);}
+	60% {transform: rotate(5deg) translate(0, -2px);}
+	65% {transform: rotate(-3deg) translate(0, -2px);}
+	70% {transform: rotate(0) translate(0, 0);}
 }
 .unvisible{
 	display: none;
@@ -91,7 +114,22 @@
 	height: 100%;  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-	
+  justify-content: center;	
+
+}
+
+path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: draw 6s   linear forwards;
+ 
+}
+
+@keyframes draw {
+	100%{
+		stroke-dashoffset:0;
+		fill:#F9FAFF;
+		stroke:transparent;
+	}
 
 }

@@ -1,22 +1,32 @@
 import { ValidationService } from "./ValidateService.js";
 import { Notification } from "./Notification.js";
+import { RequestService } from "./RequestService.js";
+
 export class SubmittingForm {
 	constructor(form) {
 		this.form = form;
 		this.validationService = new ValidationService();
-		this.notification = new Notification("Registration was successful!");
 	}
-	submitForm(e) {
+	async submitForm(e) {
 		e.preventDefault();
+		const userData = this.getUserData(this.form);
 		let isValidate = this.validationService.validate(this.form);
 		if (isValidate) {
-			this.getGratulation();
-			this.notification.show();
+			this.createGratulationSection();
 		}
-		console.log("isValidate", isValidate);
+		this.toggleAnimationOfBtn(isValidate);
+		const response = await new RequestService(isValidate).getResponse();
+		console.log("response", response);
+		new Notification(response.message).show();
+	}
+	toggleAnimationOfBtn(isValidate) {
+		const btn = this.form.querySelector(".button");
+		// if(btn.classList.contains('animate-btn')){
 
-		const userData = this.getUserData(this.form);
-		console.log("user data", userData);
+		// }
+		isValidate
+			? btn.classList.add("animate-btn")
+			: btn.classList.remove("animate-btn");
 	}
 	getUserData(form) {
 		const formData = new FormData(form);
@@ -36,20 +46,20 @@ export class SubmittingForm {
 
 		return userData;
 	}
-	getGratulation() {
+	createGratulationSection() {
 		const containerMainContent = document.querySelector(
 			".container__main-content"
 		);
 		const formContainer = containerMainContent.querySelector("#form-container");
 		formContainer.classList.add("unvisible");
-		const gratulationContent = this.getGratulationContent();
+		const gratulationContent = this.createGratulationContent();
 
 		containerMainContent.insertBefore(
 			gratulationContent,
 			containerMainContent.firstElementChild
 		);
 	}
-	getGratulationContent() {
+	createGratulationContent() {
 		const congratulatedContainer = document.createElement("div");
 		congratulatedContainer.classList.add("congratulate-container");
 
