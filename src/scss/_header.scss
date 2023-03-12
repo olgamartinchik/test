@@ -1,14 +1,17 @@
 @use '../scss/colors';
 .header{
+	position: relative;
 	display: flex;
 	align-items: flex-end;
   justify-content: unset;
 	background-color: colors.$secondary-color;
-	width: 138px;
+	max-width: 138px;
+	width: 100%;
 
 	div{
-		position: relative;
+		position: absolute;
     bottom: 51px;
+		left: 0;
 		white-space: nowrap;
 		padding: 6.5px 22.5px;
 		font-family: 'PT Sans';
@@ -20,4 +23,26 @@
 		color: colors.$main-color;
 		transform: rotate(-90deg);
 	}
+}
+@media (max-width:524px) {
+	.header{
+		max-width: 100px;
+		width: 100%;
+		div{
+			left: -62%;
+		}
+	}
+
+}
+@media (max-width: 390px) {
+	.header{
+		height: 80px;
+		max-width: 100%;
+		div{
+			transform: rotate(0);
+			left: 0;
+			bottom: 0;
+		}
+	}
+
 }

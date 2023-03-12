@@ -42,8 +42,11 @@ select, input[type="text"],input[type="password"]{
 	outline: none;
 	background: none;
 }
+select{
+	max-width: 234px;
+}
 input[type="text"], input[type="password"]{
-	width: 234px;	
+	max-width: 234px;	
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
