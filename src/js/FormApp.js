@@ -1,5 +1,6 @@
 import { ErrorService } from "./ErrorService.js";
 import { SubmittingForm } from "./Submitting.js";
+import { ValidationService } from "./ValidateService.js";
 
 export class FormApp {
 	start() {
@@ -9,9 +10,12 @@ export class FormApp {
 		form.addEventListener("submit", (e) => submittingForm.submitForm(e));
 
 		allInputs.forEach((input) => {
-			input.addEventListener("click", () => {
+			input.addEventListener("focus", () => {
 				new ErrorService().removeError(input);
 			});
+			// input.addEventListener("input", () => {
+			// 	new ValidationService().validate(form);
+			// });
 		});
 	}
 }

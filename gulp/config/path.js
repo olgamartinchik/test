@@ -24,6 +24,7 @@ export const path = {
 		static: `${srcFolder}/static/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 		json: `${srcFolder}/response/**/*.json`,
+		fonts: `${srcFolder}/fonts/**/*.*`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
@@ -32,6 +33,7 @@ export const path = {
 		images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
 		static: `${srcFolder}/static/**/*.*`,
 		json: `${srcFolder}/response/**/*.json`,
+		fonts: `${srcFolder}/fonts/**/*.*`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,

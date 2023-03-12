@@ -7,12 +7,14 @@ export class ValidationService {
 		let result = true;
 		let inputs = form.querySelectorAll("input");
 		inputs.forEach((input, ind) => {
+			// input.addEventListener("input", () => {
+			// 	console.log("input,", this.value);
+			// });
 			this.errorService.removeError(input);
 			// console.log("input name", input.name);
 			const nameRegexp = /^[a-zA-Z]+$/;
 			const emailRegexp = /^\S+@\S+\.\S+$/;
 			const passwordRegexp = /^[0-9a-zA-Z]{8,}/;
-
 			if (
 				(input.name === "name" &&
 					(input.value === "" || !nameRegexp.test(input.value))) ||
@@ -39,5 +41,10 @@ export class ValidationService {
 		});
 
 		return result;
+	}
+	inputHandler(form) {
+		form.addEventListener("input", () => {
+			this.validate(form);
+		});
 	}
 }

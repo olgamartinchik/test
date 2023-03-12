@@ -6,7 +6,7 @@ export class RequestService {
 		try {
 			const rawResponse = await fetch(
 				`../response/${this.isValidate ? "server-ok" : "server-error"}.json`,
-				{ mode: "cors" }
+				{ mode: "no-cors" }
 			);
 			const content = await rawResponse.json();
 			return content;
