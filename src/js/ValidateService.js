@@ -8,21 +8,16 @@ export class ValidationService {
 		let inputs = form.querySelectorAll("input");
 		inputs.forEach((input, ind) => {
 			const message = this.getInputErrorMessage(inputs, input, ind);
-			if (message) {
-				result = false;
-			} else {
-				result = true;
-			}
+			result = message ? false : true;
 		});
 
 		return result;
 	}
-	inputHandler(input, ind, form) {
-		const message = this.getInputErrorMessage(input, ind);
-		this.toggleAnimationOfBtn(message, form);
+	inputHandler(inputs, input, ind, btn) {
+		const message = this.getInputErrorMessage(inputs, input, ind);
+		this.toggleAnimationOfBtn(message, btn);
 	}
-	toggleAnimationOfBtn(message, form) {
-		const btn = form.querySelector(".button");
+	toggleAnimationOfBtn(message, btn) {
 		message
 			? btn.classList.add("animate-btn")
 			: btn.classList.remove("animate-btn");

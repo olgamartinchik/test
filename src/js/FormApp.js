@@ -6,6 +6,7 @@ export class FormApp {
 	start() {
 		const form = document.querySelector(".form");
 		const inputs = form.querySelectorAll("input");
+		const btn = form.querySelector(".button");
 		const submittingForm = new SubmittingForm(form);
 		form.addEventListener("submit", (e) => submittingForm.submitForm(e));
 
@@ -14,7 +15,7 @@ export class FormApp {
 				new ErrorService().removeError(input);
 			});
 			input.addEventListener("blur", () => {
-				new ValidationService().inputHandler(inputs, input, ind, form);
+				new ValidationService().inputHandler(inputs, input, ind, btn);
 			});
 		});
 	}
