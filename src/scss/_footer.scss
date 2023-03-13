@@ -4,6 +4,7 @@
 	bottom: 33px;
 	display: flex;
 	justify-content: start;
+	align-items: baseline;
 	padding: 10px 0;
 	gap: 10px;
 	z-index: 2;
@@ -11,11 +12,13 @@
 		display: contents;
 		font-family: 'WorkSans';
 		font-weight:200;
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 15px;		
 		color: colors.$subtitle-color;
 	}
 	&__login-link{
+		font-size: 12px;
 		color: colors.$secondary-color;
+		pointer-events: none;
 	}
 }
