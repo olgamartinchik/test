@@ -63,3 +63,12 @@ path {
 
 }
 
+.error-label{
+	animation: visible 1s linear forwards; 
+}
+@keyframes draw {
+	100%{
+	opacity: 1;
+	}
+
+}

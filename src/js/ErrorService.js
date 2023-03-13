@@ -29,9 +29,9 @@ export class ErrorService {
 	getErrorMessage(input) {
 		switch (input.name) {
 			case "name":
-				return "Must be only letters";
+				return "Must be only latin letters";
 			case "surname":
-				return "Must be only letters";
+				return "Must be only latin letters";
 			case "nationality":
 				return "Required";
 			case "email":
@@ -39,7 +39,7 @@ export class ErrorService {
 			case "gender":
 				return "Required";
 			case "password":
-				return "Length 8 and higher include num, uppercase, lowercase letter ";
+				return "Length 8 and higher include num, uppercase, lowercase latin letter ";
 			case "confirmPassword":
 				return "Passwords don't match";
 		}

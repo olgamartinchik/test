@@ -45,6 +45,9 @@ export class SubmittingForm {
 		const formContainer = containerMainContent.querySelector("#form-container");
 		formContainer.classList.add("invisible");
 		const gratulationContent = this.createGratulationContent();
+		if (gratulationContent) {
+			containerMainContent.style.justifyContent = "center";
+		}
 
 		containerMainContent.insertBefore(
 			gratulationContent,

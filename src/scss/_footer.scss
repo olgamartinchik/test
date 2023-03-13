@@ -1,6 +1,7 @@
 @use '../scss/colors';
 .footer{
-	position: relative;
+	position: absolute;
+	bottom: 33px;
 	display: flex;
 	justify-content: start;
 	padding: 10px 0;
