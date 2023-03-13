@@ -1,7 +1,9 @@
 @use '../scss/colors';
 body{
 	position: relative;
-	font-family: 'WorkSans';
+	font-family: 'WorkSans', sans-serif;
+
+
 	background-color:  colors.$body-color;
 	margin: 0;
 	width: 100%;
