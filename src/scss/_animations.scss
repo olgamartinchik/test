@@ -1,5 +1,5 @@
 .animate-btn:hover{
-	animation: move 1s linear infinite;
+	animation: move .5s linear infinite;
 }
 @keyframes move {
 	35% {transform: rotate(0) translate(0, 0);}

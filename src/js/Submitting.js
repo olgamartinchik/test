@@ -14,20 +14,12 @@ export class SubmittingForm {
 		if (isValidate) {
 			this.createGratulationSection();
 		}
-		this.toggleAnimationOfBtn(isValidate);
+
 		const response = await new RequestService(isValidate).getResponse();
 		console.log("response", response);
 		new Notification(response.message).show();
 	}
-	toggleAnimationOfBtn(isValidate) {
-		const btn = this.form.querySelector(".button");
-		// if(btn.classList.contains('animate-btn')){
 
-		// }
-		isValidate
-			? btn.classList.add("animate-btn")
-			: btn.classList.remove("animate-btn");
-	}
 	getUserData(form) {
 		const formData = new FormData(form);
 		const userData = {

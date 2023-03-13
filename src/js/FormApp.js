@@ -5,17 +5,17 @@ import { ValidationService } from "./ValidateService.js";
 export class FormApp {
 	start() {
 		const form = document.querySelector(".form");
-		const allInputs = form.querySelectorAll("input");
+		const inputs = form.querySelectorAll("input");
 		const submittingForm = new SubmittingForm(form);
 		form.addEventListener("submit", (e) => submittingForm.submitForm(e));
 
-		allInputs.forEach((input) => {
+		inputs.forEach((input, ind) => {
 			input.addEventListener("focus", () => {
 				new ErrorService().removeError(input);
 			});
-			// input.addEventListener("input", () => {
-			// 	new ValidationService().validate(form);
-			// });
+			input.addEventListener("blur", () => {
+				new ValidationService().inputHandler(inputs, input, ind, form);
+			});
 		});
 	}
 }
