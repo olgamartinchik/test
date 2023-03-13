@@ -64,9 +64,9 @@ path {
 }
 
 .error-label{
-	animation: visible 1s linear forwards; 
+	animation: error 1s linear forwards; 
 }
-@keyframes draw {
+@keyframes error {
 	100%{
 	opacity: 1;
 	}
